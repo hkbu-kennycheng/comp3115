@@ -107,7 +107,7 @@ We may rename the node by right clicking on the node and select `Rename`. Please
 
 ## Guess the values of age based on different groups
 
-Another stragety to handle missing values in numerical columns is to guess the values based on different groups. For example, we can guess the values of `Age` based on the `Sex` and `Pclass` columns.
+Another strategy to handle missing values in numerical columns is to guess the values based on different groups. For example, we can guess the values of `Age` based on the `Sex` and `Pclass` columns.
 
 Let's group the data by `Sex` and `Pclass` columns. To group the data, we will use the `Group by` widget. Drag and drop it to the workflow canvas. Connect the `Select Columns` widget to the `Group by` widget. Double click on the `Group by` widget to open the widget settings. Select the columns you want to group, select column `Age` for aggregation and select the aggregation method `Mean`. The widget will automatically display the data in the widget output.
 
