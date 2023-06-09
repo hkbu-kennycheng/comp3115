@@ -50,7 +50,7 @@ In this section, we will learn how to use Orange to load data and process it. We
 
 ## Loading the data
 
-To load data, we will use the `File` widget. Drag and drop it to the workflow canvas. Double click on it to open the widget settings. There are several built-in datasets in the file list. Click on the `...` button and select the `titanic.csv` file, or load dataset from URL by pasting [https://github.com/datasciencedojo/datasets/raw/master/titanic.csv](https://github.com/datasciencedojo/datasets/raw/master/titanic.csv) in `URL`. The widget will automatically load the data and display it in the widget output.
+To load data, we will use the `File` widget. Drag and drop it to the workflow canvas. Double click on it to open the widget settings. There are several built-in datasets in the file list. Click on the `...` button and select the `titanic.csv` file, or load dataset from URL by pasting [https://github.com/datasciencedojo/datasets/raw/master/titanic.csv](https://github.com/datasciencedojo/datasets/raw/master/titanic.csv) in `URL`, and press `Enter` to load it. The widget will automatically load the data and display it in the widget output.
 
 ![](images/orange-file.gif)
 
@@ -75,6 +75,16 @@ To drop unnecessary columns, we will use the `Select Columns` widget. Drag and d
 
 ![](images/orange-select-columns.gif)
 
+## Data statistics
+
+To view the data statistics, we will use the `Feature Statistics` widget. Drag and drop it to the workflow canvas. Connect the `Data Table` widget to the `Feature Statistics` widget. Double click on the `Feature Statistics` widget to see details statistics for all columns.
+
+![](images/orange-feature-statistics.gif)
+
+You will see the following statistics:
+
+![](images/orange-feature-statistics-output.png)
+
 ## Handle missing values
 
 Missing values are a common problem in data analysis. There are many ways to handle missing values. One way is to remove the rows with missing values. Another way is to replace the missing values with the mean or median of the column.
@@ -85,5 +95,51 @@ To handle missing values in numerical columns by replacing them with the mean or
 
 ![](images/orange-impute-mean.gif)
 
+We may rename the node by right clicking on the node and select `Rename`. Please rename it as `Impute Mean`.
+
 ### Handle missing values in numerical columns by replacing them with the median
 
+As we could know from the statistics, the median of `Age` column is `28.0`. To handle missing values in numerical columns by replacing them with the median, we will use the `Impute` widget. Drag and drop it to the workflow canvas. Connect the `Select Columns` widget to the `Impute` widget. Double click on the `Impute` widget to open the widget settings. Select the columns you want to impute and input `28.0` in the `Fixed value` field. The widget will automatically display the data in the widget output.
+
+![](images/orange-impute-median.gif)
+
+We may rename the node by right clicking on the node and select `Rename`. Please rename it as `Impute Median`.
+
+## Guess the values of age based on different groups
+
+Another stragety to handle missing values in numerical columns is to guess the values based on different groups. For example, we can guess the values of `Age` based on the `Sex` and `Pclass` columns.
+
+Let's group the data by `Sex` and `Pclass` columns. To group the data, we will use the `Group by` widget. Drag and drop it to the workflow canvas. Connect the `Select Columns` widget to the `Group by` widget. Double click on the `Group by` widget to open the widget settings. Select the columns you want to group, select column `Age` for aggregation and select the aggregation method `Mean`. The widget will automatically display the data in the widget output.
+
+![](images/orange-group-by.gif)
+
+## Handing missing value by mode value
+
+To handle missing values in categorical columns by replacing them with the mode value, we will use the `Impute` widget. Drag and drop it to the workflow canvas. Connect the `Select Columns` widget to the `Impute` widget. Double click on the `Impute` widget to open the widget settings. Select the columns you want to impute and select the imputation method `Most frequent`. The widget will automatically display the data in the widget output.
+
+![](images/orange-impute-mode.gif)
+
+We may rename the node by right clicking on the node and select `Rename`. Please rename it as `Impute Mode`.
+
+## Feature Type Conversion
+
+In this dataset, `Sex` and `Embarked` are categorical features that we need to map to integer values. To convert categorical features to numerical features, we will use the one-hot encoding method. For `Sex`, we will use simple mapping method.
+
+### One-hot encoding for `Embarked` column
+
+To convert categorical features to numerical features using one-hot encoding, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. Connect the `Impute Mean` widget to the `Continuize` widget. Double click on the `Continuizee` widget to open the widget settings. Select the columns you want to encode and select `One-hot encoding`. The widget will automatically display the data in the widget output.
+
+![](images/orange-continuize-onehot.gif)
+
+
+### Ordinal value for 'Sex' column
+
+To convert categorical features to numerical features using simple mapping method, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. We will reuse the `Continuize` widget we used for one-hot encoding. Double click on the `Continuizee` widget to open the widget settings. Select the columns you want to encode and select `Ordinal`. The widget will automatically display the data in the widget output.
+
+![](images/orange-continuize-ordinal.gif)
+
+## Feature Construction: Family Size
+
+To create a new feature `Family Size`, we will use the `Feature Constructor` widget. Drag and drop it to the workflow canvas. Connect the `Continuize` widget to the `Feature Constructor` widget. Double click on the `Feature Constructor` widget to open the widget settings. Click on `New > Numeric` to create a new numeric feature. Input `Family Size` as the feature name and input `SibSp + Parch + 1` as the feature expression. The widget will automatically display the data in the widget output.
+
+![](images/orange-feature-constructor.png)
