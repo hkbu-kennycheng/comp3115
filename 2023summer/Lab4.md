@@ -8,7 +8,7 @@ In this lab, you will learn how to use Orange to visualize data. You will learn 
 
 ## Dependencies
 
-You will need to install the following dependencies:
+You will need to install the following dependencies in terminal with a Python environment:
 
 ```commandline
 pip install orange3-timeseries
