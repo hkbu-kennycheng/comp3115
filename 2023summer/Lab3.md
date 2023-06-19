@@ -18,9 +18,11 @@ Orange is not a high-performance data mining and machine learning library. It's 
 
 # Getting Started with Orange
 
+You will need a Python environment to run Orange. If you don't have one, you can install Anaconda, which is a Python distribution that includes Orange. You can download Anaconda from [https://www.anaconda.com/download/](https://www.anaconda.com/download/).
+
 ## Installation
 
-Orange is available for Windows, Linux, and Mac OS X. It can be installed using the following command:
+Orange is available for Windows, Linux, and Mac OS X. It can be installed using the following command in terminal with Python environment:
 
 ```sh
 python -m pip install orange3
@@ -28,7 +30,7 @@ python -m pip install orange3
 
 ## Running Orange
 
-Orange can be run using the following command:
+Orange can be run using the following command in terminal with Python environment:
 
 ```sh
 python -m orange-canvas
@@ -71,7 +73,7 @@ This dataset was used to apply machine learning algorithms to predict which pass
 
 ## Drop unnecessary columns
 
-To drop unnecessary columns, we will use the `Select Columns` widget. Drag and drop it to the workflow canvas. Connect the `File` widget to the `Select Columns` widget. Double click on the `Select Columns` widget to open the widget settings. Select the columns you want to keep and click on `Commit`. The widget will automatically display the data in the widget output.
+To drop unnecessary columns, we will use the `Select Columns` widget. Drag and drop it to the workflow canvas. Connect the `File` widget to the `Select Columns` widget. Double click on the `Select Columns` widget to open the widget settings. Select the columns (`PassengerId`, `Ticket`,`Cabin`,`Name`) that we want to keep and click on `Commit`. The widget will automatically display the data in the widget output.
 
 ![](images/orange-select-columns.gif)
 
@@ -127,7 +129,7 @@ In this dataset, `Sex` and `Embarked` are categorical features that we need to m
 
 ### One-hot encoding for `Embarked` column
 
-To convert categorical features to numerical features using one-hot encoding, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. Connect the `Impute Mean` widget to the `Continuize` widget. Double click on the `Continuizee` widget to open the widget settings. Select the columns you want to encode and select `One-hot encoding`. The widget will automatically display the data in the widget output.
+To convert categorical features to numerical features using one-hot encoding, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. Connect the `Impute Mean` widget to the `Continuize` widget. Double click on the `Continuize` widget to open the widget settings. Select the columns you want to encode and select `One-hot encoding`. The widget will automatically display the data in the widget output.
 
 ![](images/orange-continuize-onehot.gif)
 
