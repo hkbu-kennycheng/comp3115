@@ -73,7 +73,7 @@ This dataset was used to apply machine learning algorithms to predict which pass
 
 ## Drop unnecessary columns
 
-To drop unnecessary columns, we will use the `Select Columns` widget. Drag and drop it to the workflow canvas. Connect the `File` widget to the `Select Columns` widget. Double click on the `Select Columns` widget to open the widget settings. Select the columns (`PassengerId`, `Ticket`,`Cabin`,`Name`) that we want to keep and click on `Commit`. The widget will automatically display the data in the widget output.
+To drop unnecessary columns, we will use the `Select Columns` widget. Drag and drop it to the workflow canvas. Connect the `File` widget to the `Select Columns` widget. Double click on the `Select Columns` widget to open the widget settings. Select the columns (`PassengerId`, `Ticket`,`Cabin`,`Name`) that we want to drop and click on `Commit`. The widget will automatically display the data in the widget output.
 
 ![](images/orange-select-columns.gif)
 
@@ -136,7 +136,7 @@ To convert categorical features to numerical features using one-hot encoding, we
 
 ### Ordinal value for 'Sex' column
 
-To convert categorical features to numerical features using simple mapping method, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. We will reuse the `Continuize` widget we used for one-hot encoding. Double click on the `Continuizee` widget to open the widget settings. Select the columns you want to encode and select `Ordinal`. The widget will automatically display the data in the widget output.
+To convert categorical features to numerical features using simple mapping method, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. We will reuse the `Continuize` widget we used for one-hot encoding. Double click on the `Continuize` widget to open the widget settings. Select the columns you want to encode and select `Ordinal`. The widget will automatically display the data in the widget output.
 
 ![](images/orange-continuize-ordinal.gif)
 
