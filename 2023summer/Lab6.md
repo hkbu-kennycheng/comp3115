@@ -1,6 +1,7 @@
 # Lab 6: Linear Regression with Orange
+---
 
-## Introduction to Linear Regression
+# Introduction to Linear Regression
 
 Linear regression is a supervised learning algorithm that is used to predict the value of a continuous variable. Linear regression is a simple algorithm that is easy to understand and implement. Linear regression is often used as a baseline algorithm to compare the performance of more complex algorithms.
 
@@ -31,3 +32,25 @@ out_data = Table.from_numpy(domain, arr)
 ```
 
 The code above creates a table with two columns: `x` and `y`.
+
+## Transforming data to features and target
+
+The first step in building a regression model is to transform the data into features and target. The features are the input variables that are used to predict the target variable. The target variable is the variable that we want to predict. In the case of linear regression, the features are the input variables and the target is the output variable.
+
+Let's use the `Select Columns` widget to select the `x` and `y` columns as features and target, respectively. The `Select Columns` widget can be found in the `Data` category. The `Select Columns` widget allows users to select column by name or by index. The `Select Columns` widget outputs a data table with the selected columns.
+
+![](images/select-columns.gif)
+
+## Visualizing data
+
+Before building a regression model, it is a good idea to visualize the data. The `Scatter Plot` widget can be used to visualize the data. The `Scatter Plot` widget can be found in the `Visualize` category. The `Scatter Plot` widget displays a scatter plot of the input data. The `Scatter Plot` widget can be used to visualize the relationship between the input variables and the target variable.
+
+![](images/lr-scatter-plot.gif)
+
+## Apply linear regression
+
+The `Linear Regression` widget can be found in the `Regression` category. The `Linear Regression` widget learns a linear regression model from the input data. The `Linear Regression` widget outputs a model that can be used to predict the target variable.
+
+In order to see the result coefficients, we can connect the `Linear Regression` widget to the `Data Table` widget. The `Data Table` widget can be found in the `Data` category. The `Data Table` widget displays the input data in a tabular format. The `Data Table` widget can be used to inspect the input data and the output data.
+
+![](images/linear-regression.gif)
