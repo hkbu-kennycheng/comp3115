@@ -54,3 +54,9 @@ The `Linear Regression` widget can be found in the `Regression` category. The `L
 In order to see the result coefficients, we can connect the `Linear Regression` widget to the `Data Table` widget. The `Data Table` widget can be found in the `Data` category. The `Data Table` widget displays the input data in a tabular format. The `Data Table` widget can be used to inspect the input data and the output data.
 
 ![](images/linear-regression.gif)
+
+## Drawing regression line on the scatter plot
+
+To draw the regression line on the scatter plot, we can update the `Scatter Plot` widget to show the regression line. Please check the `Show regression line` checkbox in the `Scatter Plot` widget.
+
+![](images/lr-scatter-plot-regression-line.gif)
