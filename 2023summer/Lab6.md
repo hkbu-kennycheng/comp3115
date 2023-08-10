@@ -60,3 +60,43 @@ In order to see the result coefficients, we can connect the `Linear Regression` 
 To draw the regression line on the scatter plot, we can update the `Scatter Plot` widget to show the regression line. Please check the `Show regression line` checkbox in the `Scatter Plot` widget.
 
 ![](images/lr-scatter-plot-regression-line.gif)
+
+# Case Study: Predicting the price of a house
+
+In this case study, we will use linear regression to predict the price of a house. The data set contains information about houses in the Boston area. The data set contains 506 instances and 14 features. The features include the average number of rooms per dwelling, the percentage of lower status of the population, etc. The target variable is the median value of owner-occupied homes in $1000s.
+
+The following table shows the first 5 instances in the data set:
+
+| CRIM    | ZN   | INDUS | CHAS | NOX   | RM    | AGE  | DIS    | RAD | TAX   | PTRATIO  | B      | LSTAT  | MEDV  |
+|---------|------|-------|------|-------|-------|------|--------|-----|-------|----------|--------|--------|-------|
+| 0.00632 | 18.0 | 2.31  | 0.0  | 0.538 | 6.575 | 65.2 | 4.0900 | 1.0 | 296.0 | 15.3     | 396.90 | 4.98   | 24.0  |
+| 0.02731 | 0.0  | 7.07  | 0.0  | 0.469 | 6.421 | 78.9 | 4.9671 | 2.0 | 242.0 | 17.8     | 396.90 | 9.14   | 21.6  |
+| 0.02729 | 0.0  | 7.07  | 0.0  | 0.469 | 7.185 | 61.1 | 4.9671 | 2.0 | 242.0 | 17.8     | 392.83 | 4.03   | 34.7  |
+| 0.03237 | 0.0  | 2.18  | 0.0  | 0.458 | 6.998 | 45.8 | 6.0622 | 3.0 | 222.0 | 18.7     | 394.63 | 2.94   | 33.4  |
+| 0.06905 | 0.0  | 2.18  | 0.0  | 0.458 | 7.147 | 54.2 | 6.0622 | 3.0 | 222.0 | 18.7     | 396.90 | 5.33   | 36.2  |
+
+The following table shows the description of the features in the data set:
+
+| Feature   | Description                                                                                       |
+|-----------|---------------------------------------------------------------------------------------------------|
+| CRIM      | per capita crime rate by town                                                                     |
+| ZN        | proportion of residential land zoned for lots over 25,000 sq.ft.                                  |
+| INDUS     | proportion of non-retail business acres per town                                                  |
+| CHAS      | Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)                             |
+| NOX       | nitric oxides concentration (parts per 10 million)                                                |
+| RM        | average number of rooms per dwelling                                                              |
+| AGE       | proportion of owner-occupied units built prior to 1940                                            |
+| DIS       | weighted distances to five Boston employment centres                                              |
+| RAD       | index of accessibility to radial highways                                                         |
+| TAX       | full-value property-tax rate per $10,000                                                          |
+| PTRATIO   | pupil-teacher ratio by town                                                                       |
+| B         | ![1000 (Bk - 0.63) ^ 2](https://mathjax2svg.hkbu.app/1000%5Ctimes%5Cleft(Bk%3D0.63%5Cright)%5E2) where Bk is the proportion of blacks by town |
+| LSTAT     | % lower status of the population                                                                  |
+| MEDV      | Median value of owner-occupied homes in $1000's                                                    |
+
+
+## Loading data
+
+The data is available in the `housing.tab` file. The data set can be loaded using the `File` widget. The `File` widget can be found in the `Data` category. The `File` widget allows users to load data from a file. The `File` widget outputs a data table.
+
+![](images/file-widget.gif)
