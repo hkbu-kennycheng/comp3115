@@ -65,6 +65,7 @@ To draw the regression line on the scatter plot, we can update the `Scatter Plot
 
 In this case study, we will use linear regression to predict the price of a house. The data set contains information about houses in the Boston area. The data set contains 506 instances and 14 features. The features include the average number of rooms per dwelling, the percentage of lower status of the population, etc. The target variable is the median value of owner-occupied homes in $1000s.
 
+
 The following table shows the first 5 instances in the data set:
 
 | CRIM    | ZN   | INDUS | CHAS | NOX   | RM    | AGE  | DIS    | RAD | TAX   | PTRATIO  | B      | LSTAT  | MEDV  |
@@ -94,9 +95,55 @@ The following table shows the description of the features in the data set:
 | LSTAT     | % lower status of the population                                                                  |
 | MEDV      | Median value of owner-occupied homes in $1000's                                                    |
 
+## Loading the dataset
 
-## Loading data
-
-The data is available in the `housing.tab` file. The data set can be loaded using the `File` widget. The `File` widget can be found in the `Data` category. The `File` widget allows users to load data from a file. The `File` widget outputs a data table.
+The data is available in the `housing.tab` file. The data set can be loaded using the `File` widget. The `File` widget can be found in the `Data` category. The `File` widget allows users to load data from a file.
 
 ![](images/file-widget.gif)
+
+You may connect the `File` widget to a `Data Table` in order to view the data.
+
+## Apply linear regression to the data
+
+Let's try to apply linear regression to the data by using the `Linear Regression` widget. After applying linear regression to the data, we can connect the `Linear Regression` widget to the `Data Table` widget to see the result coefficients.
+
+Finally, you will have a graphical workflow that looks like the following:
+
+![](images/lr-housing.png)
+
+## Evaluation metrics
+
+There are different metrics that can be used to evaluate the performance of a regression model. The most common metrics are mean absolute error (MAE), mean squared error (MSE), root mean squared error (RMSE) and R2 score.
+
+**MAE** is the average of the absolute differences between the predicted values and the actual values. MSE is the average of the squared differences between the predicted values and the actual values. RMSE is the square root of MSE. R2 score is the proportion of the variance in the dependent variable that is predictable from the independent variable(s).
+
+**MSE** is the most commonly used metric for regression problems. However, it is difficult to interpret because it is not in the same unit as the target variable.
+
+**RMSE** is the square root of MSE, and it is in the same unit as the target variable. Therefore, RMSE is easier to interpret than MSE.
+
+**R2** score is a normalized version of MSE. R2 score is between 0 and 1. R2 score is 1 when the model perfectly predicts the target variable. R2 score is 0 when the model does not predict the target variable.
+
+The following table shows the formulas for these metrics:
+
+| Metric | Formula                                                                                                                                                                                      |
+|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MAE    | ![](https://mathjax2svg.hkbu.app/'MAE%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Cy_i-%5Chat%7By%7D_i%7C)                                                                          |
+| MSE    | ![$MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2$](https://mathjax2svg.hkbu.app/MSE%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2)                       |
+| RMSE   | ![$RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$](https://mathjax2svg.hkbu.app/RMSE%3D%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2%7D) |
+| R2     | ![$R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}$](https://mathjax2svg.hkbu.app/R%5E2%3D1-%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Cbar%7By%7D)%5E2%7D)                                                                      |
+
+## Cross Validation
+
+Cross validation is a technique that is used to evaluate the performance of a model. Cross validation is used to estimate how well a model will perform on unseen data. Cross validation is used to reduce the risk of overfitting a model.
+
+### K-fold cross validation
+
+K-fold cross validation is a type of cross validation. K-fold cross validation is used to evaluate the performance of a model. K-fold cross validation is used to estimate how well a model will perform on unseen data. K-fold cross validation is used to reduce the risk of overfitting a model.
+
+![](https://scikit-learn.org/stable/_images/grid_search_cross_validation.png)
+
+## Evaluating the model with cross validation
+
+To evaluate the performance of the model using cross validation and different evaluation metrics, we can use the `Test & Score` widget. The `Test & Score` widget can be found in the `Evaluate` category. The `Test & Score` widget evaluates the performance of a model on a data set. The `Test & Score` widget outputs a data table with the predicted values and the actual values.
+
+![](images/lr-test-and-score.gif)
