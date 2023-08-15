@@ -41,10 +41,9 @@ Let's split the dataset into training and testing sets. Please drag in a `Data S
 
 After that, please click on the `Sample Data` button to apply the changes.
 
+## Apply Perceptron with Stochastic Gradient Descent (SGD) Classifier
 
-## Stochastic Gradient Descent (SGD) Classifier
-
-Please drag in a `Stochastic Gradient Descent` widget and double click on it to open the configuration window. Please set the following parameters:
+Please drag in a `Stochastic Gradient Descent` widget and double-click on it to open the configuration window. Please set the following parameters:
 
 - Classifier: Perceptron
 - Regression: Squared Loss
@@ -52,3 +51,40 @@ Please drag in a `Stochastic Gradient Descent` widget and double click on it to 
   - Initial Learning Rate: 1.0
 - Number of Iterations: 400
 - Regularization: None
+
+## Evaluate the model
+
+To evaluate the model, please drag in a `Test & Score` widget and double-click on it to open the configuration window. Please set the following parameters:
+
+- Score: Classification Accuracy
+- Test on: Test Data
+
+Make two connections from the `Data Sampler` widget to the `Test & Score` widget. One connection is for training and the other is for testing. After that, please click on the `Send` button to apply the changes.
+
+Link the `Stochastic Gradient Descent` widget to the `Test & Score` widget. After that, please click on the `Send` button to apply the changes.
+
+After that, you could see the accuracy of the model by looking at the `Test & Score` widget.
+
+# Multilayer Perceptron (MLP)
+
+Multilayer Perceptron (MLP) is an Artificial Neural Network (ANN) architecture. It is a supervised learning algorithm that learns a function by training on a dataset, where `X` is the input and `y` is the output. Given a set of features `X` and a target `y`, it can learn a non-linear function approximator for either classification or regression. It is different from logistic regression, in that between the input and the output layer, there can be one or more non-linear layers, called hidden layers. The MLPClassifier class implements this algorithm that learns a function by training on a dataset. It is a multi-layer perceptron (MLP) algorithm that trains using Backpropagation.
+
+## Apply MLP Classifier
+
+Please drag in a `Neural Network` widget and double-click on it to open the configuration window. Please set the following parameters:
+
+- Neurons in Hidden Layer: `50,200`, means that there are two hidden layers. The first hidden layer has 50 neurons and the second hidden layer has 200 neurons.
+- Activation Function: `ReLU`
+- Solver: `Adam`
+- Maximum Number of Iterations: `400`
+
+## Evaluate the model
+
+To evaluate the model, please drag in a `Test & Score` widget and double-click on it to open the configuration window. Please set the following parameters:
+
+- Select Cross Validation
+- Folds: 5
+
+Please connect the `File` widget to the `Test & Score` widget. And then connect the `Neural Network` widget to the newly created `Test & Score` widget. After that, please click on the `Send` button to apply the changes.
+
+After that, you could see the accuracy of the model by looking at the `Test & Score` widget.
