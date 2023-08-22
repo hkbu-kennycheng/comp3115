@@ -29,4 +29,12 @@ Support Vector Machine (SVM) is a supervised machine learning algorithm that can
 
 ## Linear SVM classifier
 
-Linear SVM is used when the data is linearly separable. In this case, the hyperplane is a line that separates the data into two classes.
+Linear SVM is used when the data is linearly separable. In this case, the hyperplane is a line that separates the data into two classes. A classifier is built based on the hyperplane. The classifier will predict the class of a new data point based on which side of the hyperplane the data point is located. It's a binary classifier, which means it can only classify data into two classes.
+
+# K-Nearest Neighbors (KNN)
+
+K-Nearest Neighbors (KNN) is a supervised machine learning algorithm that can be used for both classification and regression. The main idea of KNN is to find the K nearest data points to the new data point and use the majority class of the K nearest data points to predict the class of the new data point. The distance between the data points is calculated using Euclidean distance.
+
+## KNN classifier
+
+KNN classifier is used when the data is not linearly separable. In this case, the classifier will predict the class of a new data point based on the majority class of the K nearest data points. It's a multi-class classifier, which means it can classify data into more than two classes.
