@@ -13,6 +13,10 @@ In this lab, you will learn how to use Orange3 to cluster data. You will learn h
 - Learn how to use Orange3 to cluster data using hierarchical clustering
 - Learn how to evaluate the performance of a clustering algorithm
 
+## Prerequisites
+
+- You have read the lecture notes on clustering.
+
 # K-means algorithm
 
 The `k-means` algorithm searches for a pre-determined number of clusters within an unlabeled multidimensional dataset. It accomplishes this using a simple conception of what good clustering results should be:
