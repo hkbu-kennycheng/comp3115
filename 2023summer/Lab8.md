@@ -59,4 +59,4 @@ KNN classifier is used when the data is not linearly separable. In this case, th
 
 ![](Lab8/knn.png)
 
-## Labeling the data
+Please add a `KNN` widget which accept data from `File` widget and connect it to the `Test & Score` widget. It will compare the performance of SVM and KNN.
