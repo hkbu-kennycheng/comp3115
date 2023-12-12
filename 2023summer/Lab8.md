@@ -37,17 +37,17 @@ In this example, we would like to classify if an iris is either `setosa` or `vir
 
 ## Build an SVM classifier with RBF kernel
 
-Let's drag the SVM widget to the canvas and connect it to the `Data Table` widget. The `SVM` widget will display the SVM parameters. The `SVM` widget has two parameters: `kernel` and `C`. The `kernel` parameter specifies the kernel function used to map the data points to a higher dimensional space. The `C` parameter specifies the penalty for misclassifying data points. The `SVM` widget also has two outputs: `Model` and `Predictions`. The `Model` output is used to display the SVM model. The `Predictions` output is used to display the predictions of the SVM model.
+Let's drag the SVM widget to the canvas and connect it to the `Data Table` widget. The `SVM` widget will display the SVM parameters. The `SVM` widget has two parameters: `kernel` and `C`. The `kernel` parameter specifies the kernel function used to map the data points to a higher dimensional space. The `C` parameter specifies the penalty for misclassified data points. The `SVM` widget also has two outputs: `Model` and `Predictions`. The `Model` output is used to display the SVM model. The `Predictions` output is used to display the predictions of the SVM model.
 
 Please set the `kernel` parameter to `RBF` , the `C` parameter to `1.0` and uncheck the `Iteration limit`.
 
-![](images/iris-svm.gif)
+![](Lab8/iris-svm.gif)
 
 ## Evaluation
 
 Let's drag a `Test & Score` widget to the canvas and connect it to the `Predictions` output of the `SVM` widget. The `Test & Score` widget will display the evaluation results. The `Test & Score` widget has two inputs: `Data` and `Predictions`. The `Data` input is used to display the data. The `Predictions` input is used to display the predictions of the SVM model. The `Test & Score` widget has two outputs: `Evaluation Results` and `Predictions`. The `Evaluation Results` output is used to display the evaluation results. The `Predictions` output is used to display the predictions of the SVM model.
 
-![](images/iris-svm-evaluation.gif)
+![](Lab8/iris-svm-evaluation.gif)
 
 # K-Nearest Neighbors (KNN)
 
@@ -56,3 +56,7 @@ K-Nearest Neighbors (KNN) is a supervised machine learning algorithm that can be
 ## KNN classifier
 
 KNN classifier is used when the data is not linearly separable. In this case, the classifier will predict the class of a new data point based on the majority class of the K nearest data points. It's a multi-class classifier, which means it can classify data into more than two classes.
+
+![](Lab8/knn.png)
+
+## Labeling the data
