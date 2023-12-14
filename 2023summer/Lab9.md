@@ -90,6 +90,9 @@ Orange3 has a `k-Means` widget that implements the k-means algorithm. Please add
 
 To visualize the clusters in Orange3, please add a `Scatter Plot` widget and connect it to the `data` output of `k-Means` widget. The `Scatter Plot` widget will display the clusters. You could set the `Color` to `Cluster` to display the clusters in different colors.
 
+*Remarks:*
+- Choose Number of clusters: 4 with the `k-Means` widget.
+
 ![](Lab9/scatter-plot-widget-2.png)
 
 ## Run k-means algorithm interactively
