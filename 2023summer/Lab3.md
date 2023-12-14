@@ -44,6 +44,9 @@ When you run Orange, you will see the following window:
 
 To create a new workflow, simply click on `New` or `File` > `New` and select `Workflow`. This will open a new workflow window.
 
+*Remarks:*
+- I can't find the `Workflow` option
+
 ---
 
 # Orange Basics
@@ -142,6 +145,6 @@ To convert categorical features to numerical features using simple mapping metho
 
 ## Feature Construction: Family Size
 
-To create a new feature `Family Size`, we will use the `Feature Constructor` widget. Drag and drop it to the workflow canvas. Connect the `Continuize` widget to the `Feature Constructor` widget. Double click on the `Feature Constructor` widget to open the widget settings. Click on `New > Numeric` to create a new numeric feature. Input `Family Size` as the feature name and input `SibSp + Parch + 1` as the feature expression. The widget will automatically display the data in the widget output.
+To create a new feature `Family Size`, we will use the `Formula` widget. Drag and drop it to the workflow canvas. Connect the `Continuize` widget to the `Formula` widget. Double click on the `Formula` widget to open the widget settings. Click on `New > Numeric` to create a new numeric feature. Input `Family Size` as the feature name and input `SibSp + Parch + 1` as the feature expression. The widget will automatically display the data in the widget output.
 
 ![](images/orange-feature-constructor.png)

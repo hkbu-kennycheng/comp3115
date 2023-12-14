@@ -2,31 +2,41 @@
 
 Please complete the following exercises and submit your answers in `Orange format (.ows)` file. The file should contain all the widgets and connections between them. You can use the `Save As` option in the `File` menu to save the workflow.
 
-## Q1
+## Exercise 1
 
 Load the `loan.csv` dataset into Orange and show the general information of the dataset.
 
-## Q2
+*Remarks:*
+- data table widget in this step? feature statistics widget in this step?
+
+## Exercise 2
 
 Remove uninformative column 'Loan_ID' from the dataset.
 
-## Q3
+## Exercise 3
 
 Fill the missing values in columns `Gender`, `Married`, `Dependents` and `Self_Employed` by mode
 
-## Q4
+*Remarks:*
+- cannot fill missing values in `Dependents` by mode by default, need to change the attribute type to `Categorical` first in the `File` widget
+
+## Exercise 4
 
 Fill the missing values in column `Loan_Amount_Term` by median
 
-## Q5
+## Exercise 5
 
 Fill the missing values in column `Credit_History` by mean
 
-## Q6
+## Exercise 6
 
 Fill the missing values in column `LoanAmount` by the mean amount of each {`Gender`, `Married` and `Self_Employed`} group.
 
-## Q7
+
+*Remarks:*
+- for exercise 3 - 6, use separate `Impute` widgets for each column or use one `Impute` widget for all columns?
+
+## Exercise 7
 
 Mapping the Ordinal Feature `Dependents` to numeric by:
 
@@ -35,7 +45,7 @@ Mapping the Ordinal Feature `Dependents` to numeric by:
 - `2` -> `2`
 - `3+` -> `3`
 
-## Q8
+## Exercise 8
 
 Mapping nominal features `Gender`, `Married`, `Education` and `Self_Employed` to numeric features.
 
@@ -52,10 +62,22 @@ Mapping nominal features `Gender`, `Married`, `Education` and `Self_Employed` to
   - `Yes` -> `0`
   - `No` -> `1`
 
-## Q9
+*Remarks:*
+- use the same `Continuize` widget for exercise 7 and 8?
+- `Gender`, `Male` -> `1` and `Female` -> `0` by default, need to change the mapping?
+- `Married`, `Yes` -> `1` and `No` -> `0` by default, need to change the mapping?
+- `Self_Employed`, `Yes` -> `1` and `No` -> `0` by default, need to change the mapping?
+
+## Exercise 9
 
 One-hot encoding for `Property_Area` column and drop original `Property_Area` column.
 
-## Q10
+*Remarks:*
+- the original `Property_Area` column is dropped by default after one-hot encoding
+
+## Exercise 10
 
 Apply Z-score normalization to columns `ApplicantIncome` and `CoapplicantIncome`
+
+*Remarks:*
+- data table widget in this step?
