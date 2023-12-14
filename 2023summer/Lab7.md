@@ -24,6 +24,7 @@ Actually, Perceptron is equivalent to SGDClassifier with the following parameter
 - learning_rate="constant"
 - eta0=1 (the initial learning rate)
 - penalty=None (no regularization)
+  - *Remarks*: use regularization, you can set penalty = "L1" or penalty = "L2".
 
 ## Loading dataset
 
