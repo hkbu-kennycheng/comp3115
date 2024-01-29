@@ -100,7 +100,7 @@ To handle missing values in numerical columns by replacing them with the mean or
 
 ![](images/orange-impute-mean.gif)
 
-We may rename the node by right clicking on the node and select `Rename`. Please rename it as `Impute Mean`.
+We may rename the node by right-clicking on the node and select `Rename`. Please rename it as `Impute Mean`.
 
 ### Handle missing values in numerical columns by replacing them with the median
 
@@ -108,7 +108,7 @@ As we could know from the statistics, the median of `Age` column is `28.0`. To h
 
 ![](images/orange-impute-median.gif)
 
-We may rename the node by right clicking on the node and select `Rename`. Please rename it as `Impute Median`.
+We may rename the node by right-clicking on the node and select `Rename`. Please rename it as `Impute Median`.
 
 ## Guess the values of age based on different groups
 
@@ -145,6 +145,18 @@ To convert categorical features to numerical features using simple mapping metho
 
 ## Feature Construction: Family Size
 
-To create a new feature `Family Size`, we will use the `Formula` widget. Drag and drop it to the workflow canvas. Connect the `Continuize` widget to the `Formula` widget. Double click on the `Formula` widget to open the widget settings. Click on `New > Numeric` to create a new numeric feature. Input `Family Size` as the feature name and input `SibSp + Parch + 1` as the feature expression. The widget will automatically display the data in the widget output.
+To create a new feature `Family Size`, we will use the `Formula` widget. Drag and drop it to the workflow canvas. Connect the `Continuize` widget to the `Formula` widget. Double-click on the `Formula` widget to open the widget settings. Click on `New > Numeric` to create a new numeric feature. Input `Family Size` as the feature name and input `SibSp + Parch + 1` as the feature expression. The widget will automatically display the data in the widget output.
 
 ![](images/orange-feature-constructor.png)
+
+## Data Normalization
+
+To normalize the data, we will use the `Continuize` widget. Drag and drop it to the workflow canvas. Connect the `Formula` widget to the `Continuize` widget. Double-click on the `Continuize` widget to open the widget settings.
+
+### Min-max normalization
+
+To normalize the data using min-max normalization, please select `normalize to [0, 1]` in the `Normalization` section. The widget will automatically display the data in the widget output.
+
+### Z-score normalization
+
+To normalize the data using z-score normalization, please select `Standardize to μ=0, σ²=1` in the `Normalization` section. The widget will automatically display the data in the widget output.
