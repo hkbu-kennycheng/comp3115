@@ -24,10 +24,6 @@ Fill the missing values in column `Credit_History` by mean
 
 ## Exercise 6
 
-Fill the missing values in column `LoanAmount` by the mean amount of each {`Gender`, `Married` and `Self_Employed`} group.
-
-## Exercise 7
-
 Mapping the Ordinal Feature `Dependents` to numeric by:
 
 - `0` -> `0`
@@ -35,7 +31,7 @@ Mapping the Ordinal Feature `Dependents` to numeric by:
 - `2` -> `2`
 - `3+` -> `3`
 
-## Exercise 8
+## Exercise 7
 
 Mapping nominal features `Gender`, `Married`, `Education` and `Self_Employed` to numeric features.
 
@@ -52,10 +48,10 @@ Mapping nominal features `Gender`, `Married`, `Education` and `Self_Employed` to
   - `No` -> `0`
   - `Yes` -> `1`
 
-## Exercise 9
+## Exercise 8
 
 One-hot encoding for `Property_Area` column and drop original `Property_Area` column.
 
-## Exercise 10
+## Exercise 9
 
 Apply Z-score normalization to columns `ApplicantIncome` and `CoapplicantIncome`
