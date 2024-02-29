@@ -130,7 +130,7 @@ The following table shows the formulas for these metrics:
 | MAE    | ![](https://mathjax2svg.hkbu.app/'MAE%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Cy_i-%5Chat%7By%7D_i%7C)                                                                          |
 | MSE    | ![](https://mathjax2svg.hkbu.app/MSE%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2)                       |
 | RMSE   | ![](https://mathjax2svg.hkbu.app/RMSE%3D%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2%7D) |
-| R2     | ![$R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}$](https://mathjax2svg.hkbu.app/R%5E2%3D1-%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Cbar%7By%7D)%5E2%7D)                                                                      |
+| R2     | ![](https://mathjax2svg.hkbu.app/R%5E2%3D1-%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Chat%7By%7D_i)%5E2%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D(y_i-%5Cbar%7By%7D)%5E2%7D)                                                                      |
 
 ## Cross Validation
 
@@ -141,3 +141,5 @@ Cross validation is a technique that is used to evaluate the performance of a mo
 K-fold cross validation is a type of cross validation. K-fold cross validation is used to evaluate the performance of a model. K-fold cross validation is used to estimate how well a model will perform on unseen data. K-fold cross validation is used to reduce the risk of overfitting a model.
 
 ![](https://scikit-learn.org/stable/_images/grid_search_cross_validation.png)
+
+To perform K-fold cross validation in Orange, you can use the `Test & Score` widget. The `Test & Score` widget can be found in the `Evaluate` category. The `Test & Score` widget is used to evaluate the performance of a model using cross validation. The `Test & Score` widget outputs a table with the evaluation metrics.
