@@ -8,10 +8,7 @@ Import 'data_classification.csv' (x1, x2 are two features, y is the class label)
 
 ## Q2
 
-Perform 10-fold cross-validation on the dataset using SVM with 'rbf' kernel. Try different parameter settings for C = {0.01, 0.1, 1}. Output the accuracy of 10-fold cross-validation on the dataset with different values of C.
-
-*Remarks:*
-- C = 0.01 does not work
+Perform 10-fold cross-validation on the dataset using SVM with 'rbf' kernel. Try different parameter settings for C = {0.1, 0.5, 1}. Output the accuracy of 10-fold cross-validation on the dataset with different values of C.
 
 ## Q3
 
