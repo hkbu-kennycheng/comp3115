@@ -101,7 +101,7 @@ from sklearn.datasets import load_digits
 
 X, Y = load_digits(return_X_y=True)
 
-domain = Domain([ContinuousVariable(f'p{i}') for i in range(digits.data.shape[1])], ContinuousVariable.make("digi"))
+domain = Domain([ContinuousVariable(f'p{i}') for i in range(X.data.shape[1])], ContinuousVariable.make("digi"))
 
 out_data = Table.from_numpy(domain, X, Y)
 ```
